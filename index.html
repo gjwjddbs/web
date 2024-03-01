@@ -1,123 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-<<<<<<< HEAD
-        <meta charset="EUC-KR"/>
+        <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=egde"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>HTML</title>
     </head>
     <body>
-        <!--hn태그(h1,h2,h3,h4,h5,h6)-->
-        <!--제목이나 주제와 같은 성격의 텍스트를 나타낼 때 사용,중요도에 따라 사용-->
-        <!--h1 태그는 1번만 사용-->
-        <h1>h1 tag</h1>
-        <h2>h2 tag</h2>
-        <h3>h3 tag</h3>
-        <h4>h4 tag</h4>
-        <h5>h5 tag</h5>
-        <h6>h6 tag</h6>
-        
-        <!--p 태그-->
-        <!--단란(문단,문장)을 나타낼 때 사용하는 기본적인 태그-->
-        <p>My name is Kim</p>
+        <!--table : 표를 만드는 태그-->
+        <!--caption은 표의 제목을 나타내고 무조건 하나가 있어야 함-->
+        <!--tr은 행, th는 열(제목), td는 열(일반적인 데이터)-->
+        <!--border : 테두리-->
+        <!--thead : 그룹화(제목), tfoot : 그룹화(마지막) , tbody : 그룹화(데이터) -->
+        <!-- 순서 : thead -> tfoot -> tbody -->
+        <table border="1">
+            <caption>
+                <em>가격표</em>
+            </caption>
+            <!-- col style : 열의 길이 조정-->
+            <!-- colgroup span = ""  style = "": 열을 그룹화하여 디자인 변경-->
+            <col style = "width : 80px" />
+            <colgroup span="2" style ="width:140px"></colgroup>
+            <col style = "width : 80px" />
+            <thead>
+                <tr>
+                    <!--열과 행 그룹화-->
+                    <th scope="rowgroup" rowspan="2">번호</th>
+                    <th scope="colgroup" colspan="3">제품</th>
+                </tr>
+                <tr>
+                    <!--scope : 데이터를 서로 연관시킴-->
+                    <!-- "col" : 열, "row" : 행-->
+                    <th scope ="col">상품명</th>
+                    <th scope ="col">수량</th>
+                    <th scope ="col">가격</th>
+                </tr>
+            </thead>
+            <!--rowspan : 행 병합, 병합된 행 중에 1는 지워야 함-->
+            <!--colspan : 열 병합-->
+            <tfoot>
+                <tr>
+                    <td>총금액</td>
+                    <td colspan="3">1,800원</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>제로 콜라</td>
+                    <td>1개</td>
+                    <td rowspan="2">1,500원</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>환타</td>
+                    <td>5개</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>사이다</td>
+                    <td>2개</td>
+                    <td>1,800원</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <!--br 태그-->
-        <!--줄바꿈을 하기 위해서 사용하는 태그-->
-        <p>My name is <br />
-            Kim</p>
-
-        <!--blockquote cite=""-->
-        <!--인용문을 나타낼 때 사용하는 태그-->
-        <blockquote cite="https://www.google.com/">인용문</blockquote>
-
-        <!--q 태그-->
-        <!--짧은 인용문을 나타낼 때 사용하는 태그-->
-        <q cite="https://ko.wikipedia.org/wiki/%EA%B5%AC%EA%B8%80">짧은 인용문</q>
-        <br />
-        <!--ins, del-->
-        <!--ins 어떠한 내용을 새롭게 삽입할 때 사용하는 태그-->
-        <!--del 어떠한 내용을 삭제할 때 사용하는 태그-->
-        <ins>새롭게 삽입(추가)되는 내용</ins>
-        <br />
-        <del>기존에 있었지만 삭제되는 내용</del>
-
-        <br />
-       
-        <!--sub,sup-->
-        <!--sub : 아래 첨자, sup : 윗 첨자-->
-        <p>공기의 원소 기호는 H<sub>2</sub>O입니다.</p>
-        <p>4<sup>2</sup>=16</p>
-        
-        <!-- div, span-->
-        <!--그룹을 짓기 위해서 사용하는 태그-->
-        <!--div는 인라인과 블록을 둘 다 사용하지만 span은 인라인만-->
-        <div class="movie">
-            <h2>영화 소개</h2>
-            <p>영화 소개 하는 페이지</p>
-        </div>
-
-        <div class="tv">
-            <h3>TV 소개</h3>
-            <p>TV 프로그램 소개<span>소개</span></p>
-        </div>
-        <!--목록 태그들-->
-        <!--ul(unordered list) : 순서가 없는 리스트-->
-        <!--li(list item)-->
-        <ul>
-            <li>아이템 1</li>
-            <li>아이템 2</li>
-            <li>아이템 3</li>
-        </ul>
-
-        <!--ol(oreder list) : 순서가 있는 리스트-->
-        <!--li(list item)-->
-        <ol>
-            <li>아침 먹기</li>
-            <li>점식 먹기</li>
-            <li>저녁 먹기</li>
-        </ol>
-
-        <!--dl(definition list,descrption list) : 설명할 수 있는 리스트 목록-->
-        <!--dt(dscription trem) : 묘사하는 용어, dd(description details) : 설명하는 부분-->
-        <dl>
-            <dt>HTML</dt>
-            <dd>HTML은 HyperText Markup Language 약자이다.</dd>
-        </dl>
-
-        <!--a(anchor 태그)-->
-        <!--다른 문서 또는 내부의 다른 영역과 연결할 때 사용 하는 태그,클릭할 때 링크로 이동-->
-        <!--href : 이동할 링크 , target : "_blank" : 새 탭에서 열기-->
-        <a href="https://www.naver.com" target="_blank">네이버</a>
-
-        <!--img 태그-->
-        <!--이미지 삽입-->
-        <!--src : 삽입할 이미지의 주소 링크, alt : 제목 설정-->
-        <img 
-            src="https://th.bing.com/th/id/OIP.B0lOzIVpbkWmzeA2luB0nQAAAA?rs=1&pid=ImgDetMain" 
-            alt="제로 콜라"
-        />
-        
-        <!--a와 img 응용-->
-        <a href="https://th.bing.com/th/id/OIP.B0lOzIVpbkWmzeA2luB0nQAAAA?rs=1&pid=ImgDetMain" target="_blank">
-            <img src="https://th.bing.com/th/id/OIP.B0lOzIVpbkWmzeA2luB0nQAAAA?rs=1&pid=ImgDetMain" alt="제로 콜라">
-        </a>
-
-        <br />
-        
-        <!--strong,em-->
-        <!--strong(굵게) : 문장을 강조할 때, em(기울임) : 단어를 강조할 때 사용-->
-        <strong>경고! <em>관계자</em> 외 출입 금지</strong>
-
-=======
-        
-        <meta charset="UTF-16"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=egde"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>MY first Web Page!</title>
-    </head>
-    <body>
-        <p>dddd</p>
->>>>>>> 96efc57f88005e0aa8d40831a6fc9ad9366e23e1
     </body>
 </html>

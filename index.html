@@ -7,63 +7,51 @@
         <title>HTML</title>
     </head>
     <body>
-        <!--table : 표를 만드는 태그-->
-        <!--caption은 표의 제목을 나타내고 무조건 하나가 있어야 함-->
-        <!--tr은 행, th는 열(제목), td는 열(일반적인 데이터)-->
-        <!--border : 테두리-->
-        <!--thead : 그룹화(제목), tfoot : 그룹화(마지막) , tbody : 그룹화(데이터) -->
-        <!-- 순서 : thead -> tfoot -> tbody -->
-        <table border="1">
-            <caption>
-                <em>가격표</em>
-            </caption>
-            <!-- col style : 열의 길이 조정-->
-            <!-- colgroup span = ""  style = "": 열을 그룹화하여 디자인 변경-->
-            <col style = "width : 80px" />
-            <colgroup span="2" style ="width:140px"></colgroup>
-            <col style = "width : 80px" />
-            <thead>
-                <tr>
-                    <!--열과 행 그룹화-->
-                    <th scope="rowgroup" rowspan="2">번호</th>
-                    <th scope="colgroup" colspan="3">제품</th>
-                </tr>
-                <tr>
-                    <!--scope : 데이터를 서로 연관시킴-->
-                    <!-- "col" : 열, "row" : 행-->
-                    <th scope ="col">상품명</th>
-                    <th scope ="col">수량</th>
-                    <th scope ="col">가격</th>
-                </tr>
-            </thead>
-            <!--rowspan : 행 병합, 병합된 행 중에 1는 지워야 함-->
-            <!--colspan : 열 병합-->
-            <tfoot>
-                <tr>
-                    <td>총금액</td>
-                    <td colspan="3">1,800원</td>
-                </tr>
-            </tfoot>
-            <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td>제로 콜라</td>
-                    <td>1개</td>
-                    <td rowspan="2">1,500원</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>환타</td>
-                    <td>5개</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>사이다</td>
-                    <td>2개</td>
-                    <td>1,800원</td>
-                </tr>
-            </tbody>
-        </table>
+        <!--오디오를 넣는 태그-->
+        <!--<audio src="오디오 경로" controls></audio>-->
+        <!--controls : 재생 버튼-->
+        <!--source : 비디오와 오디오가 브라우저의 종류에 따라 포맷 맞는지 확인하는 태그-->
+        <!--source 태그를 사용하여 여러 개의 형식을 지정,첫 번째 source의 형식이 맞지 않으면 2번째 형식으로, 다 맞지 않으면 텍스트가 뜸-->
+        <audio src="./test.mp4" controls>    
+            <source src="./test.mp4" type="audio/mp4">
+            <source src="./test.mp4" type="audio/wav">
+        </audio>
+        <!--비디오를 넣는 태그-->
+        <!--<video src="[비디오 경로]" controls></video>-->
+        <!--controls : 재생 버튼-->
+        <video src="./test.mp4" controls></video>
+
+
+        <!--시맨틱 태그 : 태그의 이름만으로 태그의 용도나 역활에 대한 의미가 명확한 태그-->
+        <!--header : 웹 페이지에서 헤더를 담당하는 태그-->
+        <header></header>
+        <!--nav : 웹 페이지에서 다른 사이트로 연결하는 태그-->
+        <nav></nav>
+        <!--section : 웹 페이지에서 논리적으로 관련 있는 내용 영역을 구분할 때 사용-->
+        <!--section에서는 hn 태그를 vlfgl 사용-->
+        <section>
+            <h2>제목</h2>
+        </section>
+        <!--article : 어떤 웹 페이지에서든 독립적으로 사용할 수 있는 태그 -->
+        <article></article>
+        <!--aside : 웹 페이지에서 안에서 주력 내용이나 독립적인 내용으로 보기 어려워-->
+        <!--article 태그나 section 태그로 영역을 구분할 수 없을 때 사용-->
+        <aside></aside>
+        <!--footer : 웹 페이지에서 최하단 부분(푸터 영역)을 구분할 때 사용-->
+        <!--저작권 정보,연락처,사이트 맵 등의 요소들이 포함-->
+        <footer></footer>
+        <!--main : 웹 페이지에서 중요한 부분을 나타내는 태그-->
+        <main></main>
+
+
+        <!--글로벌 속성 : 태그의 종류와 상관없이 모든 태그가 사용 가능한 속성-->
+        <!--class : 요소의 클래스명을 지정할 때 사용, 같은 클래스명은 여러 요소가 중복해서 가질 수 있음-->
+        <!--id : 요소의 아이디를 지정할 때 사용, 중복될 수 없음-->
+        <!--style : css 코드를 인라인으로 작성할 때 사용-->
+        <!--title : 요소에 추가 정보를 넣을 때 사용, title 요소를 넣은 값의 요소에 마우스를 올리면 표시됨-->
+        <!--lang : 요소에 사용한 텍스트의 언어 코드를 지정할 때 사용-->
+        <!--data-* : 사용자 커스텀 속성,HTML에서는 사용하지 않은 개인 속성을 설정-->
+        <p class="red" id="red" style="" title="test" hidden="hidden" lang="en" data-name="spider">dd</p>
 
     </body>
 </html>

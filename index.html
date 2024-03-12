@@ -5,53 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=egde"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>HTML</title>
+        <!--style : 내부 스타일 시트-->
+        <!--보통 head 안에서 사용-->
+        <style>
+            /*css*/
+            /*태그 부분 : 선택자, 태그에 적용할 스타일을 작성하는 영역 : 선언부*/
+            dt{color:red}
+        </style>
+        <!--link : 외부 스타일 시트-->
+        <!--별도록 파일을 외부에 생성하여 사용-->
+        <link rel="stylesheet" href="./style.css"/>
     </head>
     <body>
-        <!--오디오를 넣는 태그-->
-        <!--<audio src="오디오 경로" controls></audio>-->
-        <!--controls : 재생 버튼-->
-        <!--source : 비디오와 오디오가 브라우저의 종류에 따라 포맷 맞는지 확인하는 태그-->
-        <!--source 태그를 사용하여 여러 개의 형식을 지정,첫 번째 source의 형식이 맞지 않으면 2번째 형식으로, 다 맞지 않으면 텍스트가 뜸-->
-        <audio src="./test.mp4" controls>    
-            <source src="./test.mp4" type="audio/mp4">
-            <source src="./test.mp4" type="audio/wav">
-        </audio>
-        <!--비디오를 넣는 태그-->
-        <!--<video src="[비디오 경로]" controls></video>-->
-        <!--controls : 재생 버튼-->
-        <video src="./test.mp4" controls></video>
-
-
-        <!--시맨틱 태그 : 태그의 이름만으로 태그의 용도나 역활에 대한 의미가 명확한 태그-->
-        <!--header : 웹 페이지에서 헤더를 담당하는 태그-->
-        <header></header>
-        <!--nav : 웹 페이지에서 다른 사이트로 연결하는 태그-->
-        <nav></nav>
-        <!--section : 웹 페이지에서 논리적으로 관련 있는 내용 영역을 구분할 때 사용-->
-        <!--section에서는 hn 태그를 vlfgl 사용-->
-        <section>
-            <h2>제목</h2>
-        </section>
-        <!--article : 어떤 웹 페이지에서든 독립적으로 사용할 수 있는 태그 -->
-        <article></article>
-        <!--aside : 웹 페이지에서 안에서 주력 내용이나 독립적인 내용으로 보기 어려워-->
-        <!--article 태그나 section 태그로 영역을 구분할 수 없을 때 사용-->
-        <aside></aside>
-        <!--footer : 웹 페이지에서 최하단 부분(푸터 영역)을 구분할 때 사용-->
-        <!--저작권 정보,연락처,사이트 맵 등의 요소들이 포함-->
-        <footer></footer>
-        <!--main : 웹 페이지에서 중요한 부분을 나타내는 태그-->
-        <main></main>
-
-
-        <!--글로벌 속성 : 태그의 종류와 상관없이 모든 태그가 사용 가능한 속성-->
-        <!--class : 요소의 클래스명을 지정할 때 사용, 같은 클래스명은 여러 요소가 중복해서 가질 수 있음-->
-        <!--id : 요소의 아이디를 지정할 때 사용, 중복될 수 없음-->
-        <!--style : css 코드를 인라인으로 작성할 때 사용-->
-        <!--title : 요소에 추가 정보를 넣을 때 사용, title 요소를 넣은 값의 요소에 마우스를 올리면 표시됨-->
-        <!--lang : 요소에 사용한 텍스트의 언어 코드를 지정할 때 사용-->
-        <!--data-* : 사용자 커스텀 속성,HTML에서는 사용하지 않은 개인 속성을 설정-->
-        <p class="red" id="red" style="" title="test" hidden="hidden" lang="en" data-name="spider">dd</p>
-
+        <dl>
+            <dt>안녕하세요!</dt>
+            <dd>반갑습니다.</dd>
+        </dl>
+        <!--인라인으로 스타일 설정-->
+        <!-- <태그 style=""></태그> -->
+        <h1 style="color:red;front-size:24px">dd</h1>
     </body>
+    
 </html>

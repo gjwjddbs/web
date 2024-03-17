@@ -5,25 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=egde"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>HTML</title>
-        <!--style : 내부 스타일 시트-->
-        <!--보통 head 안에서 사용-->
         <style>
-            /*css*/
-            /*태그 부분 : 선택자, 태그에 적용할 스타일을 작성하는 영역 : 선언부*/
-            dt{color:red}
+            .box {
+                font-size:32px;
+            }
+            /*font-size
+            %:속성의 상위 요소 속성값에 상대적인 크기를 가짐 16px * %
+            em:부모 요소의 font-size에 상대적인 크기를 가짐
+            rem:html 태그의 택스트 크기에  상대적인 크기를 가짐
+            vw:뷰포트의 너비를 기준으로 상대적인 크기를 가짐
+            vh:뷰포트의 높이를 기준으로 상대적인 크기를 가짐
+            */
+            /*color
+            rgb(색깔1,색깔2,색깔3): 색깔1, 색깔2, 색깔3을 조합하여 색을 만듦
+            rgba(색깔1,색깔2,색깔3,투명도): 색깔1, 색깔2, 색깔3을 조합하여 투명도를 가진 색을 만듦(소수점으로 표현,0~1)
+            #16진수: 16진수를 통해 색을 만듦
+            */
+            p {
+                font-size: 100%;
+                color:rgba(255,0,0);
+            }
         </style>
-        <!--link : 외부 스타일 시트-->
-        <!--별도록 파일을 외부에 생성하여 사용-->
-        <link rel="stylesheet" href="./style.css"/>
     </head>
     <body>
-        <dl>
-            <dt>안녕하세요!</dt>
-            <dd>반갑습니다.</dd>
-        </dl>
-        <!--인라인으로 스타일 설정-->
-        <!-- <태그 style=""></태그> -->
-        <h1 style="color:red;front-size:24px">dd</h1>
-    </body>
-    
+        <!--상속 : inner 클래스가 box 클래스를 상속받아 부모 클래스의 형식을 물려받음-->
+        <div class="box">
+            <div class="inner">
+                <p>p tag</p>
+            </div>
+        </div>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <a href="https://google.com" target="_blank">구글</a>
+    </body>    
 </html>

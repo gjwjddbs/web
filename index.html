@@ -7,7 +7,7 @@
         <title>HTML</title>
         <style>
             .box {
-                font-size:32px;
+                font-size:20px;
             }
             /*font-size
             %:속성의 상위 요소 속성값에 상대적인 크기를 가짐 16px * %
@@ -25,18 +25,40 @@
                 font-size: 100%;
                 color:rgba(255,0,0);
             }
+            ol{
+                font-size: 3rem;
+                color:rgba(255,0,0,0.3)
+            }
         </style>
     </head>
     <body>
         <!--상속 : inner 클래스가 box 클래스를 상속받아 부모 클래스의 형식을 물려받음-->
         <div class="box">
             <div class="inner">
-                <p>p tag</p>
+                <p><del>p</del> tag</p>
             </div>
         </div>
         <h1>h1</h1>
         <h2>h2</h2>
         <h3>h3</h3>
         <a href="https://google.com" target="_blank">구글</a>
+        <ol>
+            <li>1st</li>
+            <li>2nd</li>
+            <li>3rd</li>
+        </ol>
+        <th>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <br>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </th>
     </body>    
 </html>
